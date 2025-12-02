@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "bin": "dist/index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --external:jsdom",
     "start": "node dist/index.js"
   },
   "devDependencies": {
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^24.10.1",
     "esbuild": "^0.27.0"
+  },
+  "dependencies": {
+    "jsdom": "^27.2.0"
   }
 }
